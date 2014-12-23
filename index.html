@@ -48,18 +48,14 @@
             <ul>
               <li><a href="#toc">Table of Contents</a></li>
               <li><a href="#audience">Target Audience</a></li>
-              <li><a href="#install">Installation</a></li>
-              <li>
-                <a href="">Phasellus consequat</a>
+              <li><a href="#install">Installation</a>
                 <ul>
-                  <li><a href="#">Lorem ipsum dolor</a></li>
-                  <li><a href="#">Phasellus consequat</a></li>
-                  <li><a href="#">Magna phasellus</a></li>
-                  <li><a href="#">Etiam dolore nisl</a></li>
+                  <li><a href="#install-step1">Step 1</a></li>
+                  <li><a href="#install-step2">Step 2</a></li>
                 </ul>
               </li>
               <li><a href="http://shop.oreilly.com/product/0636920033424.do">
-                Shop at O'Reilly   
+                Shop at O'Reilly
               </a></li>
             </ul>
           </li>
@@ -221,6 +217,92 @@
           <h2>Installation</h2>
           <p>Please follow the instructions below to set up your computer.</p>
         </header>
+        <p>To follow along with the code examples and work on the exercies 
+        in <i>Effective Computation in Physics</i>, you'll first need to 
+        install some software. Everything that you need is 
+        <a href="http://opensource.org/definition">free and open source</a>.
+        We will be using the <a href="http://conda.pydata.org/">conda</a> 
+        package manager for all of our installation needs.</p>
+
+        <a name="install-step1"></a>
+        <h3>Step 1: Download & Install Miniconda</h3>
+        <p>If you have not done so already, please download and install 
+        miniconda. Miniconda is Python distribution that comes with conda, 
+        which we will then use to install everything else we need. 
+        To download miniconda, please visit 
+        <a href="http://conda.pydata.org/miniconda.html">http://conda.pydata.org/miniconda.html</a> 
+        and find the version that is right for your system. Linux, Mac OSX, 
+        and Windows builds are available for 32- and 64-bit architectures.
+        You do not need administrator privileges on your computer to 
+        install miniconda. We recommend that you install the Python 3 
+        version of miniconda. All of the examples in this book should 
+        work with Python 2 as well.</p>
+
+        <p>If you are on Windows, you can install miniconda simply by 
+        double clicking on the executable and following the 
+        instructions on the installation wizard.</p>
+
+        <p style="margin-left:2em;margin-right:2em;">
+        <u><b>Special Windows Instructions - msysGit and Git Bash:</b></u>
+        If you are on Windows, please download and install msysGit, 
+        which you can find at 
+        <a href="http://msysgit.github.io/">http://msysgit.github.io/</a>. 
+        This will provide you with both the version control system called 
+        git as well as the bash shell. Both of these we will discuss at 
+        length and are not automatically available on Windows or through 
+        miniconda. The default install settings should be good enough for 
+        purposes here.</p>
+
+        <p>If you are on Linux or Mac OSX, first open your +Terminal+ 
+        application. If you do not know where your terminal lives, uses 
+        your operating system's search functionality to find it.  Once you 
+        have an open terminal, type in the following after the dollar sign 
+        ($).  Note that you may have to change the version number in the 
+        filename (the Miniconda-3.7.0-Linux-x86_64.sh part) to match the file
+        that you downloaded.</p>
+
+        <script src="https://gist.github.com/scopatz/15e6a3d66cb1109cade8.js">
+        </script>
+        <!--
+        # On Linux, Use the following to install Miniconda:
+        $ bash ~/Downloads/Miniconda-3.7.0-Linux-x86_64.sh
+
+        # On MacOSX, Use the following to install Miniconda:
+        $ bash ~/Downloads/Miniconda3-3.7.0-MacOSX-x86_64.sh
+        -->
+
+        <p>In the above we have downloaded miniconda into our default download
+        directory, <code>~/Downloads</code>.  The name of the file that we 
+        downloaded also depends on the version of miniconda that we grabbed 
+        as well as whether it was 32- or 64-bit. You may have to adjust the 
+        file name accordingly.</p>
+
+        <p>On all Linux, Mac OSX, and Windows, when the installer asks you 
+        if you would like to automatically change or update the 
+        <code>bashrc</code> file or the system <code>PATH</code>, say yes.
+        That will make it so that miniconda is automatically in your 
+        environment and will ease further installation. Otherwise, all of 
+        the other default installation options should be good enough.</p>
+
+        <a name="install-step2"></a>
+        <h3>Step 2: Install the Packages</h3>
+        <p>Now that you have conda installed, we can install the packages 
+        that we need for this book.  On Windows open up the command prompt, 
+        <code>cmd.exe</code>. On Linux and Mac OSX, open up a terminal.  
+        You may need to open up a new terminal window for the installation of
+        minconda to take effect. Now, no matter what your operating system is, 
+        type the following command:</p>
+
+        <script src="https://gist.github.com/scopatz/18c66ba6ff4918468169.js">
+        </script>
+        <!--
+        # On Linux, Use the following to install Miniconda:
+        $ conda install --yes numpy scipy ipython ipython-notebook matplotlib pandas \
+          pytables nose setuptools sphinx mpi4py
+        -->
+
+        <p>This may take a few minutes to download. After this, you are 
+        ready to go!</p>
       </article>
 
     </div>
