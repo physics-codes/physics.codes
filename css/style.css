@@ -539,7 +539,7 @@
 		position: relative;
 		background: #fff;
 		overflow-x: hidden;
-		padding: 6em 0 6em 0;
+        padding: 2em 0 2em 0;
 	}
 
 	.image-wrapper
@@ -631,8 +631,8 @@
 		{
 			display: block;
 			width: 100%;
-			height: 4em;
-			line-height: 4em;
+            height: 4em; 
+            line-height: 2em;
 			background: rgba(255,255,255,0.15);
 			border: solid 1px;
 			border-color: #fff;
